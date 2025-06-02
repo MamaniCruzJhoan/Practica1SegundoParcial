@@ -1,0 +1,88 @@
+Mi familia comienza con Valentin Cruz Vicente y María Pérez Mendoza, quienes son mis abuelos. 
+Ellos tienen cuatro hijos: Dillma Cruz Pérez, José Luis Cruz Pérez, Miguel Ángel Cruz Pérez
+y Basilio Cruz Lucas.
+
+Mi mama Dillma Cruz Pérez esta casada con Jhonny Mamani Acero y tienen tres hijos:
+Jhossua Thiago Mamani Cruz, Jhoan Aracely Mamani Cruz y Uziel Jheremy Mamani Cruz.
+
+Y mis tios José Luis Cruz Pérez esta casado con Betty Nina, tiene dos hijas: Heidi Cruz Nina 
+y Sarahi Cruz Nina.
+
+Miguel Ángel Cruz Pérez, casado con Nancy Marquina Sarabia, tiene dos hijos: 
+Franck Cruz Marquina y Alejandro Cruz Marquina.
+
+Basilio Cruz Lucas, casado con Sonia Martínez, tiene dos hijos: 
+Anahi Cruz Martínez y Kevin Cruz Martínez.
+
+En total, mi familia incluye a mis abuelos y a sus cuatro hijos y nueve nietos,
+con las relaciones de primos entre los hijos de Dillma, José Luis, Miguel Ángel y Basilio,
+ y tíos.
+
+Podria hacer la siguiente consulta para ver a las sobrinas
+?- sobrina(X, sonia_martinez).
+X = jhoan_aracely_mamani_cruz ;
+X = heidi_cruz_nina ;
+X = sarahi_cruz_nina ;
+false.
+ 
+para ver los hijos de valentin seria
+ hijo(Hijo, valentin_cruz_vicente).
+Hija = dillma_cruz_perez 
+Hijo = jose_luis_cruz_perez ;
+Hijo = miguel_angel_cruz_perez ;
+Hijo = basilio_cruz_lucas. 
+una vez que realice la consulta se debe oprimir ";"para ver a todos los sobrinos o hijos
+ A CONTINUACION ALGUNAS CONSULTAS QUE REALICE:
+% d:/inteligencia artificial/practica1segundoparcial/arbolgenealogico compiled 0.03 sec, -5 clauses
+?- sobrina(X, sonia_martinez).
+X = jhoan_aracely_mamani_cruz ;
+X = heidi_cruz_nina ;
+X = sarahi_cruz_nina ;
+false.
+
+?- hijo(Hijo, valentin_cruz_vicente).
+Hijo = dillma_cruz_perez ;
+Hijo = jose_luis_cruz_perez ;
+Hijo = miguel_angel_cruz_perez ;
+Hijo = basilio_cruz_lucas;
+false. ->muestra un false por que no has hijos solo son 4
+
+?- nieto(X, valentin_cruz_vicente).
+X = jhoshua_thiago_mamani_cruz ;
+X = uziel_jheremy_mamani_cruz ;
+X = franck_cruz_marquina ;
+X = alejandro_cruz_marquina ;
+X = kevin_cruz_martinez ;
+false.
+
+?- nieta(X, valentin_cruz_vicente).
+X = jhoan_aracely_mamani_cruz ;
+X = heidi_cruz_nina ;
+X = sarahi_cruz_nina ;
+X = anahi_cruz_martinez ;
+false.
+
+?- primo(X, franck_cruz_marquina).
+X = kevin_cruz_martinez ;
+X = jhoshua_thiago_mamani_cruz ;
+X = uziel_jheremy_mamani_cruz ;
+false.
+
+?- hijo(Hijo, dillma_cruz_perez).
+Hijo = jhoshua_thiago_mamani_cruz ;
+Hijo = jhoan_aracely_mamani_cruz ;
+Hijo = uziel_jheremy_mamani_cruz.
+
+?- primo(X, heidi_cruz_nina).
+X = franck_cruz_marquina ;
+X = alejandro_cruz_marquina ;
+X = kevin_cruz_martinez ;
+X = jhoshua_thiago_mamani_cruz ;
+X = uziel_jheremy_mamani_cruz ;
+false.
+
+?- prima(X, heidi_cruz_nina).
+X = anahi_cruz_martinez ;
+X = jhoan_aracely_mamani_cruz ;
+false.
+
