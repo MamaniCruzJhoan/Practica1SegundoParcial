@@ -45,7 +45,7 @@ Hijo = dillma_cruz_perez ;
 Hijo = jose_luis_cruz_perez ;
 Hijo = miguel_angel_cruz_perez ;
 Hijo = basilio_cruz_lucas;
-false. ->muestra un false por que no has hijos solo son 4
+false. ->muestra un false por que no hay mas hijos para mostrar solo son 4
 
 ?- nieto(X, valentin_cruz_vicente).
 X = jhoshua_thiago_mamani_cruz ;
