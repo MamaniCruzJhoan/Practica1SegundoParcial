@@ -62,7 +62,7 @@ madre(sonia_martinez, kevin_cruz_martinez).
 % Progenitor (padre o madre)
 progenitor(X, Y) :- padre(X, Y); madre(X, Y).
 
-% Hijo (varón o mujer)
+% Hijo (varÃ³n o mujer)
 hijo(X, Y) :- progenitor(Y, X).
 
 % Hermano
@@ -77,27 +77,27 @@ abuelo(X, Y) :- padre(X, Z), progenitor(Z, Y).
 % Abuela
 abuela(X, Y) :- madre(X, Z), progenitor(Z, Y).
 
-% Cónyuge (padre o madre de un mismo hijo)
+% CÃ³nyuge (padre o madre de un mismo hijo)
 conyuge(X, Y) :- padre(X, Z), madre(Y, Z), X \= Y.
 conyuge(X, Y) :- padre(Y, Z), madre(X, Z), X \= Y.
 
-% Tío (varón)
+% TÃ­o 
 tio(X, Y) :- hermano(X, Z), progenitor(Z, Y).
 tio(X, Y) :- hermana(Z1, Z), progenitor(Z, Y), once(conyuge(X, Z1)), varon(X).
 
-% Tía (mujer)
+% TÃ­a 
 tia(X, Y) :- hermana(X, Z), progenitor(Z, Y).
 tia(X, Y) :- hermano(Z1, Z), progenitor(Z, Y), once(conyuge(X, Z1)), mujer(X).
-% Sobrino (varón)
+% Sobrino (varÃ³n)
 sobrino(X, Y) :- (tio(Y, X); tia(Y, X)), varon(X).
 
-% Sobrina (mujer)
+% Sobrina 
 sobrina(X, Y) :- (tio(Y, X); tia(Y, X)), mujer(X).
 
-% Nieto (varón)
+% Nieto 
 nieto(X, Y) :- (abuelo(Y, X); abuela(Y, X)), varon(X).
 
-% Nieta (mujer)
+% Nieta 
 nieta(X, Y) :- (abuelo(Y, X); abuela(Y, X)), mujer(X).
 
 % Primos y primas
